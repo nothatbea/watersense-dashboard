@@ -54,4 +54,5 @@ async function fetchLatestWaterLevel() {
 fetchLatestWaterLevel();
 
 // Auto refresh every 10s
-setInterval(fetchLatestWaterLevel, 10000);
+setInterval(fetchLatestWaterLevel, 5000);
+

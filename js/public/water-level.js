@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const API_URL = ".https://steelblue-skunk-833121.hostingersite.com/api/sensors/latest.php";
+    const API_URL = "https://steelblue-skunk-833121.hostingersite.com/api/sensors/latest.php";
 
 // CONFIG (must match ESP32 / backend logic)
 const MAX_HEIGHT_CM = 150;
@@ -63,3 +63,4 @@ async function loadWaterLevel() {
 // Initial load + auto refresh
 loadWaterLevel();
 setInterval(loadWaterLevel, 5000);
+

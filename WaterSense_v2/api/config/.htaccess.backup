@@ -1,0 +1,91 @@
+# Deny all access to config files
+Order Deny,Allow
+Deny from all
+
+# Even PHP files should be blocked from direct access
+<FilesMatch "\.php$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+```
+
+3. **Save As:**
+   - Navigate to: `D:\xampp\htdocs\WaterSense_v2\api\config\`
+   - Filename: `".htaccess"` (with quotes!)
+   - Save as type: **All Files (*.*)**
+   - Click **Save**
+
+---
+
+### **File 4: `.gitignore`**
+
+**Location:** `D:\xampp\htdocs\WaterSense_v2\.gitignore`
+
+1. Open **Notepad**
+2. Paste this:
+```
+# ============================================
+# WaterSense Project - Git Ignore File
+# ============================================
+
+# ===== Sensitive Config Files =====
+/api/config/db.php
+/api/config/db_hosting.php
+*.env
+
+# ===== Logs =====
+/logs/*
+!/logs/.gitkeep
+*.log
+error_log
+
+# ===== Uploads =====
+/uploads/*
+!/uploads/.gitkeep
+
+# ===== Database Backups =====
+*.sql
+*.sql.gz
+*.sql.zip
+/docs/backups/
+
+# ===== OS Generated Files =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== IDE Files =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ===== Temporary Files =====
+*.tmp
+*.temp
+*.cache
+*.bak
+*.old
+
+# ===== Node Modules (if you add Node.js later) =====
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ===== Vendor (if you add Composer later) =====
+/vendor/
+composer.lock
+
+# ===== Build Files =====
+/dist/
+/build/

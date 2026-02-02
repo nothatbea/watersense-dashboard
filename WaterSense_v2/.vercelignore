@@ -1,0 +1,7 @@
+api/
+logs/
+uploads/
+docs/
+.htaccess
+.htaccess.backup
+.vscode/
